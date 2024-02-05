@@ -23,6 +23,7 @@ div {
     border: 1px solid #ddd;
     flex-basis: calc(32% - 1rem);
     margin: 0.5rem;
+    height: 40%;
     padding: 1rem;
 }
 
