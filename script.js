@@ -71,7 +71,7 @@ async function fetchData() {
         const sss = data.data.text;
         const aaa = document.getElementById("vvv");
 
-        console.log(data);
+        console.log(data.data);
         aaa.innerHTML = sss
         aaa.style.fontSize = "30px"
 
