@@ -61,7 +61,7 @@ const loadingIcon = document.getElementById('loading-icon');
 
 async function fetchData() {
     try {
-        const response = await fetch("http://api.alquran.cloud/v1/ayah/random")
+        const response = await fetch("https://api.alquran.cloud/v1/ayah/random")
 
         if (!response.ok) {
             throw new Error("Super Eagles");
