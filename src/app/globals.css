@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.team-card {
+  padding: 15px 30px;
+  border-radius: 20px;
+  color: rgb(90, 1, 90);
+  text-align: justify;
+}
+.team-name {
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.vertical-line {
+  border-left: 3px solid rgb(88, 28, 135); /* You can adjust the color and thickness as needed */
+  height: 50px; /* Adjust the height of the vertical line */
+}
+
+.hover:hover {
+  background-color: rgb(231, 210, 253);
+}
