@@ -7,6 +7,7 @@ export default function Quran() {
   const [name1, setName1] = useState(null);
   const [numberInSurah, setNumberInSurah] = useState(null);
   const [meaning, setMeaning] = useState(null);
+  const [chapter, setChapter] = useState (null);
   const [error, setError] = useState(null);
 
   const quranVerse = async () => {
@@ -33,6 +34,7 @@ export default function Quran() {
 
       setName(data.data[0].surah.name);
       setName1(data.data[1].surah.englishNameTranslation);
+      setChapter(data.data[0].surah.number);
 
     } catch (error) {
       setError(error);
@@ -62,6 +64,7 @@ export default function Quran() {
             <p className="text-lg mt-10 italic font-thin">
               {name1} - {name}
             </p>
+            <p className="text-xl font-bold">{chapter} : {numberInSurah}</p>
 
           </div>
         )}
