@@ -61,7 +61,7 @@ export default function Quran() {
               {verse} : {numberInSurah}
             </p>
             <p className="text-xl">{meaning}</p>
-            <p className="text-lg mt-10 italic font-thin">
+            <p className="text-lg mt-10 italic">
               {name1} - {name}
             </p>
             <p className="text-xl font-bold">{chapter} : {numberInSurah}</p>
