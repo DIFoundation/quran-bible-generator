@@ -90,7 +90,6 @@ export default function Bible() {
     try {
       const verseId = getRandomVerse(); // Assuming 31102 verses in the Bible
       const bibleId = "65eec8e0b60e656b-01"; // The ID of the English Standard Version translation
-      // const response = await fetch(`https://api.scripture.api.bible/v1/bibles​/${bibleId}​/verses​/${verseId}`, {
       const response = await fetch(
         `https://api.scripture.api.bible/v1/bibles/${bibleId}/verses/${verseId}?include-chapter-numbers=false&include-verse-numbers=false`,
         {
@@ -110,8 +109,8 @@ export default function Bible() {
   };
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-between px-24 py-12">
-      <div className=" font-extrabold text-5xl font uppercase">
+    <div className="flex min-h-screen flex-col items-center justify-between px-10 md:px-24 py-8 md:py-12">
+      <div className="py-6 font-extrabold text-xl md:text-5xl font uppercase">
         Bible Generator
       </div>
 
@@ -128,7 +127,6 @@ export default function Bible() {
             <p>{verse}</p>
             <p className="mt-10 italic text-lg">{name}</p>
 
-            {/* <h2 className='text-2xl mt-5'>Quran Verse: {name}</h2> */}
           </div>
         )}
       </div>
@@ -136,55 +134,17 @@ export default function Bible() {
       <button
         onClick={bibleVerse}
         type="button"
-        className="bg-blue-700 px-16 py-5 rounded-xl text-white font-medium hover:font-semibold"
-      >
+        className="bg-blue-700 px-8 md:px-16 py-3 md:py-5 rounded-xl text-white font-medium hover:font-semibold">
         Generate Bible Verse
       </button>
-      <div className="fixed left-10">
-        <a href="/" className="px-5 py-3 text-white bg-blue-700 hover:bg-blue-300 hover:text-blue-900 rounded-l-lg">Home</a>
-        <a href="/quran" className="px-5 py-3 text-white bg-blue-700 hover:bg-blue-300 hover:text-blue-900 rounded-r-lg">Quran</a>
+
+      <div className="fixed left-5 md:left-10 max-md:top-5">
+        <a href="/" className="px-2.5 md:px-5 py-2 md:py-3 text-white bg-blue-700 hover:bg-blue-300 hover:text-blue-900 rounded-l-lg">Home</a>
+        
+        <a href="/quran" className="px-2.5 md:px-5 py-2 md:py-3 text-white bg-blue-700 hover:bg-blue-300 hover:text-blue-900 rounded-r-lg">Quran</a>
       </div>
       
     </div>
   );
 }
 
-// React component modified to use a proxy server
-
-// import React, { useState } from 'react';
-
-// export default function Bible() {
-//   const [verse, setVerse] = useState(null);
-//   const [error, setError] = useState(null);
-
-//   const bibleVerse = async () => {
-//     try {
-//       const verseId = Math.floor(Math.random() * (23145 - 1)) + 1;
-//       const bibleId = '65eec8e0b60e656b-01'
-//       const response = await fetch(`https://api.scripture.api.bible/v1/bibles​/${bibleId}​/verses​/${verseId}`); // Request to your server-side script
-//       const data = await response.json();
-
-//       setVerse(data);
-//       console.log(data);
-//     } catch (error) {
-//       setError(error);
-//     }
-//   };
-
-//   return (
-//     <div className='flex min-h-screen flex-col items-center justify-between px-24 py-12'>
-//       <div className="font-extrabold text-5xl font uppercase">Bible Generator</div>
-
-//       <div className='text-center w-full text-2xl'>
-//         {error && <p className='text-sm'>Sorry, the server misunderstood your request:<br/>{error.message}</p>}
-//         {verse && (
-//           <div className='text-3xl leading-[3rem] font-medium my-10'>
-//             <p>{verse}</p>
-//           </div>
-//         )}
-//       </div>
-
-//       <button onClick={bibleVerse} type='button' className='bg-blue-700 px-16 py-5 rounded-xl text-white font-medium hover:font-semibold'>Generate Bible Verse</button>
-//     </div>
-//   );
-// }

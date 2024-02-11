@@ -14,9 +14,7 @@ export default function Quran() {
       const min = 1;
       const max = 6237;
       const verseId = Math.floor(Math.random() * (max - min)) + min; // Assuming 31102 verses in the Bible
-      const response = await fetch(
-        // `https://api.alquran.cloud/ayah/${verseId}/editions/quran-uthmani,en.asad,en.pickthall`,
-        `https://api.alquran.cloud/v1/ayah/${verseId}/editions/quran-uthmani,en.asad`,
+      const response = await fetch(`https://api.alquran.cloud/v1/ayah/${verseId}/editions/quran-uthmani,en.asad`,
         {
           headers: {
             // 'Access-Control-Allow-Credentials':true,
@@ -42,8 +40,8 @@ export default function Quran() {
   };
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-between px-24 py-12">
-      <div className=" font-extrabold text-5xl font uppercase">
+    <div className="flex min-h-screen flex-col items-center justify-between px-10 md:px-24 py-8 md:py-12">
+      <div className="py-6 font-extrabold text-xl md:text-5xl font uppercase">
         Quran Generator
       </div>
 
@@ -65,7 +63,6 @@ export default function Quran() {
               {name1} - {name}
             </p>
 
-            {/* <h2 className='text-2xl mt-5'>Quran Verse: {name}</h2> */}
           </div>
         )}
       </div>
@@ -73,14 +70,14 @@ export default function Quran() {
       <button
         onClick={quranVerse}
         type="button"
-        className="bg-blue-700 px-16 py-5 rounded-xl text-white font-medium hover:font-semibold"
-      >
+        className="bg-blue-700 px-8 md:px-16 py-3 md:py-5 rounded-xl text-white font-medium hover:font-semibold">
         Generate Quran Verse
       </button>
 
-      <div className="fixed left-10">
-        <a href="/" className="px-5 py-3 text-white bg-blue-700 hover:bg-blue-300 hover:text-blue-900 rounded-l-lg">Home</a>
-        <a href="/bible" className="px-5 py-3 text-white bg-blue-700 hover:bg-blue-300 hover:text-blue-900 rounded-r-lg">Bible</a>
+      <div className="fixed left-5 md:left-10 max-md:top-5">
+        <a href="/" className="px-2.5 md:px-5 py-2 md:py-3 text-white bg-blue-700 hover:bg-blue-300 hover:text-blue-900 rounded-l-lg">Home</a>
+        
+        <a href="/bible" className="px-2.5 md:px-5 py-2 md:py-3 text-white bg-blue-700 hover:bg-blue-300 hover:text-blue-900 rounded-r-lg">Bible</a>
       </div>
 
     </div>
