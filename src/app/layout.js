@@ -11,11 +11,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
       <head>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7129018346117539"
      crossorigin="anonymous"></script>
       </head>
+       
+       <body className={inter.className}>{children}</body>
+      
     </html>
   );
 }
