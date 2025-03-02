@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Link from "next/link";
 
 export default function Quran() {
   const [verse, setVerse] = useState(null);
@@ -78,9 +79,13 @@ export default function Quran() {
       </button>
 
       <div className="fixed left-5 md:left-10 max-md:top-5">
-        <a href="/" className="px-2.5 md:px-5 py-2 md:py-3 text-white bg-blue-700 hover:bg-blue-300 hover:text-blue-900 rounded-l-lg">Home</a>
-        
-        <a href="/bible" className="px-2.5 md:px-5 py-2 md:py-3 text-white bg-blue-700 hover:bg-blue-300 hover:text-blue-900 rounded-r-lg">Bible</a>
+        <Link href="/" className="px-2.5 md:px-5 py-2 md:py-3 text-white bg-blue-700 hover:bg-blue-300 hover:text-blue-900 rounded-l-lg">
+          Home
+        </Link>
+
+        <Link href="/bible" className="px-2.5 md:px-5 py-2 md:py-3 text-white bg-blue-700 hover:bg-blue-300 hover:text-blue-900 rounded-r-lg">
+          Bible
+        </Link>
       </div>
 
     </div>

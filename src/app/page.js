@@ -1,4 +1,4 @@
-import Image from "next/image";
+import React from "react";
 import Link from "next/link";
 
 export default function Home() {
@@ -10,18 +10,18 @@ export default function Home() {
 
 
       <div className=" flex max-md:flex-col md:space-x-10 max-md:space-y-5">
-        <a href="/quran" className="bg-blue-700 px-8 md:px-16 py-3 md:py-5 rounded-xl text-center text-white font-medium hover:bg-blue-100 hover:text-blue-800 hover:font-semibold">
+        <Link href="/quran" className="bg-blue-700 px-8 md:px-16 py-3 md:py-5 rounded-xl text-center text-white font-medium hover:bg-blue-100 hover:text-blue-800 hover:font-semibold">
           <button type="button" className="">
-           Quran Generate
+          Quran Generate
           </button>
-        </a>
+        </Link>
         
-
-        <a href="/bible" className="bg-blue-700 px-10 md:px-16 py-3 md:py-5 rounded-xl text-center text-white font-medium hover:bg-blue-100 hover:text-blue-800 hover:font-semibold">
+        <Link href="/bible" className="bg-blue-700 px-10 md:px-16 py-3 md:py-5 rounded-xl text-center text-white font-medium hover:bg-blue-100 hover:text-blue-800 hover:font-semibold">
           <button type="button" className="">
            Bible Generate
           </button>
-        </a>
+        </Link>
+        
       </div>
     </main>
   );

@@ -1,5 +1,7 @@
 "use client";
 import React, { useState } from "react";
+import Link from "next/link";
+
 const VERSES = [
   { book: 'GEN', chapter: 1, verseStart: 1, verseEnd: 31 },
   { book: 'EXO', chapter: 20, verseStart: 1, verseEnd: 26 },
@@ -139,9 +141,13 @@ export default function Bible() {
       </button>
 
       <div className="fixed left-5 md:left-10 max-md:top-5">
-        <a href="/" className="px-2.5 md:px-5 py-2 md:py-3 text-white bg-blue-700 hover:bg-blue-300 hover:text-blue-900 rounded-l-lg">Home</a>
-        
-        <a href="/quran" className="px-2.5 md:px-5 py-2 md:py-3 text-white bg-blue-700 hover:bg-blue-300 hover:text-blue-900 rounded-r-lg">Quran</a>
+        <Link href="/" className="px-2.5 md:px-5 py-2 md:py-3 text-white bg-blue-700 hover:bg-blue-300 hover:text-blue-900 rounded-l-lg">
+          Home
+        </Link>
+
+        <Link href="/quran" className="px-2.5 md:px-5 py-2 md:py-3 text-white bg-blue-700 hover:bg-blue-300 hover:text-blue-900 rounded-r-lg">
+          Quran
+        </Link>
       </div>
       
     </div>
